@@ -142,7 +142,7 @@ class Turtlebot():
             self.rate.sleep()
 
             error = sqrt((self.x_desired-self.pose.x)**2 + (self.y_desired-self.pose.y)**2)
-            if (error < 0.018 or abs(error-self.last_error) <= 2e-7) and self.counter > 1:
+            if (error < 0.1 or abs(error-self.last_error) <= 2e-7) and self.counter > 1:
                 # print(error-self.last_error)
                 break
 
